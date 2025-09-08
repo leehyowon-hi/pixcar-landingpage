@@ -1,0 +1,380 @@
+@import url(reset.css);
+@import url(font.css);
+
+
+body{
+  font-family: 'PyeojinGothic';
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+  line-height: 1.5;
+} 
+h2{
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
+}
+/* Header------------------------------ */
+header{
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color:#1f1f1f;
+  z-index: 2;
+  padding: 20px;
+}
+
+#header-inner{
+  width: 1400px;
+  height: 80px;
+  color: #fff;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header-inner img{width: 120px;}
+.util{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:24px;
+  font-weight: bold;
+}
+.menu{
+  display: flex;
+  column-gap: 50px;
+  font-size: 25px;
+}
+.btn{
+  width: 150px;
+  height: 80px;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 80px;
+  color: #fff;
+  margin-left: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 5px #fff;
+}
+.btn:after{
+  content: '';
+  background: url(/image/button-bg.jpg) no-repeat center/cover;
+  opacity: 0.7;
+  width: inherit;
+  height: inherit;
+  display: block;
+  position: absolute;
+  top: 0 ;
+  left: 0;
+  z-index: -1;
+}
+
+/* Main--------------------------------- */
+main{
+  background: url(/image/car-bg.jpg) no-repeat center/cover  ;
+  height: 1100px;
+  margin-top: 120px;
+  color: #fff;
+  position: relative;
+}
+main .caption{
+  width: 1400px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+main .visaul{margin-top: 100px;}
+
+.visaul h1{
+  width: 1400px;
+  font-family: 'GyeonggiMillenniumTitle';
+  font-weight: 800;
+  font-size: 65px;
+  text-align: center;
+  top: 0px;
+  left: 0px;
+}
+
+.visaul p{font-size: 60px;}
+main .point{
+  font-family: 'GyeonggiMillenniumTitle';
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 80px;
+}
+button{
+  width: 500px;
+  height: 150px;
+  border-radius: 50px;
+  font-size: 30px;
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+button:hover{
+  /* https://grabient.com/HQFgrA7ANKBsCcMBMBGWMTyRsJlL2AA5YwYJ4BmGI3GWEQsJaS0ABnZhTGpThQxmg9kA?style=linearGradient&steps=7&angle=90 */
+
+background: linear-gradient(90deg, rgba(42, 0, 27, 1.000) 0.000%, rgba(120, 19, 12, 1.000) 16.667%, rgba(206, 72, 14, 1.000) 33.333%, rgba(255, 141, 34, 1.000) 50.000%, rgba(255, 213, 67, 1.000) 66.667%, rgba(255, 255, 105, 1.000) 83.333%, rgba(255, 255, 141, 1.000) 100.000%);
+border:none;
+color: #000;
+font-size: 25px;
+font-weight: bold;
+transition: 0.3s;
+box-shadow: 0 0 25px red;
+}
+
+/* Section------------------------------- */
+section{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#article1{
+  width: 100%;
+  height: 870px;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)),
+  url(/image/luca-bg.jpg) no-repeat center/cover;
+}
+
+#article1 .movies{
+  width: 1400px;
+  height: 670px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.img-wrap{
+  width:230px;
+  height: 335px;
+  overflow: hidden;
+  position: relative;
+}
+.movies .img-wrap img{
+  width:100%;
+  height: 100%;
+  transition: 0.3s;
+  display: block;
+  object-fit: cover;
+}
+.img-wrap:hover img{
+  transform: scale(1.1); 
+}
+.img-wrap:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 93%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  padding: 10px;
+  transition: 0.3s;
+  word-break: keep-all; 
+  overflow-wrap: break-word; 
+  overflow: visible;
+}
+.img-wrap:hover::after{
+opacity: 1;
+}
+
+.car::after { content: "카 : 레디에이터 스프링스 속 플로의  V8 카페에서 잠시 쉬어가세요.";}
+.monster::after { content: "몬스터 주식회사: 설리와 마이크 콤비가 안내하는 몬스터주식회사를 둘러보세요."; }
+.nemo::after { content: "니모를 찾아서: 바다 속에서 니모와 도리와 함께 헤엄쳐보세요."; }
+.ratatouile::after { content: "라따뚜이: 링귀니의 주방에서 맛의 여행을 떠나보세요."; }
+.up::after { content: "업: 풍선 매달린 칼 할아버지 집에서 추억의 물건들을 감상하세요."; }
+.up2::after { content: "업: 풍선 매달린 칼 할아버지 집에서 추억의 물건들을 감상하세요."; }
+.coco::after { content: "코코: 미겔의 가족을 만나고 죽은 자의 땅을 탐험하세요."; }
+.coco2::after { content: "코코: 미겔의 가족을 만나고 죽은 자의 땅을 탐험하세요."; }
+.elemental::after { content: "엘리멘탈: 4개 원소가 모인 엘리멘트 시티에서 특별한 친구를 만나보세요."; }
+.luca::after { content: "루카: 포르토로소 마을에서 평화로운 여름을 만끽하세요."; }
+.toy::after { content: "토이스토리: 앤디의 방에서 장난감이 되어 즐거운 시간을 보내세요."; }
+.insideout::after { content: "인사이드아웃: 라일리의 마음속 감정들과 특별한 경험을 해보세요."; }
+
+
+
+
+#article2{
+  height: 1750px; 
+  width: 100%;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)),
+  url(/image/nemo-bg.jpg) no-repeat center/cover;
+}
+.info{
+  width: 1400px;
+  height: 1500px;
+  margin: auto;
+  margin-top: 100px;
+}
+.info h3{
+  font-weight: 300;
+  display: inline-block;
+  color: #fff;
+  font-size: 30px;
+  margin: 10px 0;
+  border-bottom: 3px solid #fff;
+}
+.info ul li{
+  font-size: 25px;
+  color: #fff;
+  line-height: 2.1;
+  margin-left: 40px;
+}
+.info .info1 b{color: lightgreen;}
+.info .info2 b{color: lightcoral;}
+.info .info3 b{color: lightskyblue;}
+.info h3:nth-of-type(4){
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+#article3{
+  width: 100%;
+  height: 1800px;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)),
+  url(/image/insideout-bg.jpg) no-repeat center/cover; 
+}
+.price{
+  width: 1400px;
+  margin: auto;
+  color: #fff;
+  margin-top: 100px;
+}
+.price h3{
+  font-size: 25px;
+}
+.price table{
+  border: 3px solid #fff;
+  color:#fff;
+  width: 1400px;
+  table-layout: fixed;
+  text-align: center;
+  margin: 20px auto;
+}
+table td{
+  border: 1px solid #fff;
+  padding: 30px 20px; 
+  font-size: 20px;
+}
+.price table:nth-of-type(2) td{
+  padding: 30px 10px; 
+  font-size: 20px;
+}
+#article4{
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)),
+  url(/image/toy-bg.jpg) no-repeat center/cover; 
+
+}
+.review{
+  width: 1400px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+.review h2{
+  text-align: start;
+  margin-left: 65px;
+}
+.review2{
+  width: inherit;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height:30px;
+}
+.review2 p{
+  width: 400px;
+  height: 300px;
+  color: #fff;
+  border: 10px solid #fff;
+  padding: 10px;
+  margin-right: 25px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#article5{
+  width: 100%;
+  height: 730px;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)),
+  url(/image/rata-bg.jpg) no-repeat center/cover; 
+} 
+.map{
+  width: 1400px;
+  margin: auto;
+  margin-top: 100px;
+}
+.map h2{
+  color: #fff;
+  margin-bottom:20px;
+  margin-left: 100px;
+}
+.mini-map{
+  width: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ride{
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  font-size: 22px;
+  line-height: 2;
+  color: #fff;
+}
+.ride h6{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+/* footer------------------------------- */
+footer{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: 1.2;
+  padding-top: 30px;
+  color: #fff;
+  background-color: #000;
+}
